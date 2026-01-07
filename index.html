@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Tech News Aggregator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 AI & Tech News</h1>
+            <p class="subtitle">Your daily dose of technology and artificial intelligence news</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All News</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="tech">Tech</button>
+            </div>
+            <div class="refresh-container">
+                <button id="refreshBtn" class="refresh-btn">🔄 Refresh</button>
+                <span id="lastUpdated" class="last-updated"></span>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <p>Loading news...</p>
+        </div>
+
+        <div id="error" class="error-message" style="display: none;"></div>
+
+        <div id="newsContainer" class="news-grid">
+            <!-- News articles will be dynamically inserted here -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No news articles found. Try refreshing or check back later.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI & Tech News Aggregator</p>
+            <p class="footer-note">News sources: Hacker News, Tech news APIs</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
